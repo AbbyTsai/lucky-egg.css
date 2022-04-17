@@ -1,0 +1,53 @@
+ h1{
+    font-family: 'Lobster', cursive;
+    font-size: 72px;
+    font-weight: bolder;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5em;
+  }
+
+  .mainlogo{
+    position: relative;
+  }
+
+  .mainlogo img{
+    position: absolute;
+    right: -30px;
+    top: 8px;
+  }
+
+  #tool{
+    margin-top: -2em;
+  }
+
+  #egg{
+    position: relative;
+    font-size: 36px;
+    left: -30%;
+    transform:rotate(345deg);
+    font-family: 'Lobster', cursive;
+  }
+
+  @media screen and (max-width:480px){
+    #egg{
+      position: absolute;
+      font-size: 36px;
+      left: 25px;
+      writing-mode: vertical-lr;
+      transform:rotate(5deg);
+    }
+
+    h1{
+      font-size:64px;
+    }
+    
+    #tool{
+      margin-top: -0.2em;
+    }
+  }
+  

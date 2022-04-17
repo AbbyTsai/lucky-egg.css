@@ -1,0 +1,40 @@
+#picture{
+    grid-area: BC;
+    transform: scale(1.1, 1.3);
+    position: relative;
+    top: 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+  }
+
+#copyButton{
+    background: hotpink;
+    width:70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    bottom:-50px;
+    grid-area:BC;
+    box-shadow: 3px 2px 0px 4px grey;
+    border:5px;
+  }
+
+#copyButton:hover{
+    transform: translateX(5px);
+  }
+
+@media screen and (max-width:480px){
+  #picture{
+      transform: translateX(8px) scale(1.07, 1.3);
+  }
+
+  
+  #copyButton{
+    bottom:-40px;
+  }
+}

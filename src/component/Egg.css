@@ -1,0 +1,123 @@
+.backgroundinput{
+    border:20px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;	
+	  align-items: center;
+	  justify-content: center;
+    z-index:10;
+}
+
+.backgroundinput p{
+  display: none;
+}
+
+#option1{
+    grid-area: BB;
+    animation: up 3s 2s 1 forwards;
+}
+
+#option2{
+    grid-area: AC;
+    animation:up 3s 4s 1 forwards;
+}
+
+#option3{
+    grid-area: BD;
+    animation:up 3s 6s 1 forwards;
+}
+
+#option4{
+    grid-area: CA;
+    border-radius:51% 65% 65% 96% / 22% 32% 28% 64%;
+	  transform: scale(1.3) translate(-30px);
+}
+
+#option5{
+    grid-area: CE;
+    border-radius:43% 60% 51% 73% / 59% 90% 87% 22%;
+	  transform: scale(1.3) translate(25px);
+}
+
+#option6{
+    grid-area: DB;
+    animation:down 3s 2s 1 forwards;
+}
+
+#option7{
+    grid-area: DC;
+    animation:down 3s 4s 1 forwards;
+}
+
+#option8{
+    grid-area: DD;
+    animation:down 3s 6s 1 forwards;
+}
+
+.backgroundinput:nth-child(-n+3){
+    border-radius:66% 54% 74% 32% / 80% 42% 12% 4%;
+    transform: translateY(40px);
+}
+
+.backgroundinput:nth-child(n+6){
+    border-radius:10% 25% 85% 35% / 22% 77% 85% 60%;
+    transform: translateY(-70px);
+}
+
+@keyframes up{
+    0%{transform: translateY(40px);}
+    20%{transform: rotate(-10deg) translateY(40px);}
+    30%{transform: rotate(10deg) translateY(40px);}
+    40%{transform: rotate(0deg) translateY(40px);}
+    100%{transform: translateY(-23px);}
+}
+
+@keyframes down{
+    0%{transform: translateY(-70px);}
+    20%{transform: rotate(10deg) translateY(-70px);}
+    30%{transform: rotate(-10deg) translateY(-70px);}
+    40%{transform: rotate(0deg) translateY(-70px);}
+    100%{transform: translateY(15px);}
+}
+
+.inputradio{
+    height:100%;
+	  width:100%;
+	  appearance: none;
+	  position: relative;
+}
+
+.inputarea{
+    display: grid;
+    grid-template-columns: 80px repeat(3, calc((100vw)/5)) 80px;
+    grid-template-rows: 10px 140px 140px 140px 10px;
+    grid-template-areas: 
+      'AA AB AC AD AE'
+      'BA BB AC BD BE'
+      'CA BC BC BC CE'
+      'DA DB DC DD DE'
+      'EA EB EC ED EE';
+    justify-content: center;
+    margin-top:2em;
+    margin-bottom:2em;
+}
+
+@media screen and (max-width:480px){
+.backgroundinput{
+    border:10px solid black;
+}
+
+#option4{
+   transform: scale(1.2,1.3) translate(-10px);
+}
+
+#option5{
+   transform: scale(1.2,1.3) translate(10px);
+}
+
+.inputarea{
+  grid-template-columns: 45px repeat(3, calc(100vw/5)) 45px;
+  grid-template-rows: 10px 140px 120px 140px 10px;
+}   
+}
